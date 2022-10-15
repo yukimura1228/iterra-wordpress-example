@@ -1,0 +1,15 @@
+{
+  "name": "iterra",
+  "version": "0.0.1",
+  "description": "iterra wordpress cording test!!",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "node_modules/.bin/sass src/scss/:dist/css/ --no-source-map --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Koju Okada <okada091228@gmail.com> (https://github.com/yukimura1228)",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
