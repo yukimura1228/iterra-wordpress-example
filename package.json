@@ -1,15 +1,23 @@
 {
-  "name": "iterra",
-  "version": "0.0.1",
-  "description": "iterra wordpress cording test!!",
+  "name": "iterra_wordpress_example",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "node_modules/.bin/sass src/scss/:dist/css/ --no-source-map --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "wp-env": "./node_modules/.bin/wp-env"
   },
-  "author": "Koju Okada <okada091228@gmail.com> (https://github.com/yukimura1228)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukimura1228/iterra-wordpress-example.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yukimura1228/iterra-wordpress-example/issues"
+  },
+  "homepage": "https://github.com/yukimura1228/iterra-wordpress-example#readme",
   "devDependencies": {
-    "sass": "^1.55.0"
+    "@wordpress/env": "^5.4.0"
   }
 }
