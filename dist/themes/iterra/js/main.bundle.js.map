@@ -1,0 +1,1 @@
+{"version":3,"file":"./js/main.bundle.js","mappings":";;;;;AAAA,wB","sources":["webpack://iterra_wordpress_example/./src/index.js"],"sourcesContent":["console.log(\"testtest\");"],"names":[],"sourceRoot":""}

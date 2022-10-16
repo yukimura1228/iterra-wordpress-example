@@ -1,0 +1,1 @@
+{"version":3,"file":"style.css","mappings":";;;AAAA;EAEI,UAAU","sources":["webpack://iterra_wordpress_example/./src/index.scss"],"sourcesContent":["div {\r\n  h2 {\r\n    color: red;\r\n  }\r\n}"],"names":[],"sourceRoot":""}
