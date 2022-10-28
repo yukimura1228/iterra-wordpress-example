@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "wp-env": "./node_modules/.bin/wp-env",
+    "wp-env": "wp-env",
     "wp-env:destroy": "./node_modules/.bin/wp-env destroy",
     "build": "./node_modules/.bin/webpack",
     "build:prod": "./node_modules/.bin/webpack --mode production",
@@ -21,19 +21,6 @@
   },
   "homepage": "https://github.com/yukimura1228/iterra-wordpress-example#readme",
   "devDependencies": {
-    "@wordpress/env": "^5.4.0",
-    "autoprefixer": "^10.4.12",
-    "css-loader": "^6.7.1",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.1",
-    "node-sass": "^7.0.3",
-    "postcss-loader": "^7.0.1",
-    "sass-loader": "^13.1.0",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.4.1",
-    "typescript": "^4.8.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.1"
+    "@wordpress/env": "^5.4.0"
   }
 }
