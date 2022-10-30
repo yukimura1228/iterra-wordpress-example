@@ -1,10 +1,434 @@
 <!DOCTYPE html>
-<html>
-  <head> </head>
-  <body>
-    <div>
-      <h2>hello World!!!</h2>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KENJI ISHIMARU</title>
+  <!-- Library - Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+
+    const swiperHero = new Swiper('[data-swiper-id="swiperHero"]', {
+      grabCursor: true,
+      keyboard: true,
+      watchOverflow: true,
+      loop: true,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 6000
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 2
+        }
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+    });
+  </script>
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+
+    const swiperVoice = new Swiper('[data-swiper-id="swiperVoice"]', {
+      grabCursor: true,
+      keyboard: true,
+      watchOverflow: true,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1.52,
+          spaceBetween: 20
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40
+        }
+      }
+    });
+
+    const swiperAlbum01 = new Swiper('[data-swiper-id="swiperAlbum01"]', {
+      allowTouchMove: false,
+      loop: true,
+      loopedSlides: 5,
+      speed: 5000,
+      autoplay: {
+        delay: 0
+      },
+      freeMode: true,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2.2,
+          spaceBetween: 20
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      },
+      on: {
+        slideChangeTransitionStart: function(){
+          this.wrapperEl.style.transitionTimingFunction = 'linear';
+        }
+      },
+    });
+
+    const swiperAlbum02 = new Swiper('[data-swiper-id="swiperAlbum02"]', {
+      allowTouchMove: false,
+      loop: true,
+      loopedSlides: 6,
+      speed: 3000,
+      autoplay: {
+        delay: 0
+      },
+      freeMode: true,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2.1,
+          spaceBetween: 10
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 5,
+          spaceBetween: 20
+        }
+      },
+      on: {
+        slideChangeTransitionStart: function(){
+          this.wrapperEl.style.transitionTimingFunction = 'linear';
+        }
+      },
+    });
+  </script>
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css" />
+  <!-- Original CSS -->
+  <link rel="stylesheet" href="assets/styles/index.css">
+</head>
+<body>
+  <header class="header">
+    <div class="headerNav">
+      <div class="headerNav__container">
+        <div class="headerNav__logo"><a href="/" class="headerNav__logoAnc"><img src="assets/images/logo_corporate.png" alt="KENJI ISHIMARU" width="90" height="30" loading="lazy"></a></div>
+        <button class="headerNav__button"></button>
+      </div>
     </div>
-    <h1>world</h1>
-  </body>
+    <div class="headerHero">
+      <div class="headerHero__container swiper-container" data-swiper-id="swiperHero">
+        <ul class="headerHero__list swiper-wrapper">
+          <li class="headerHero__item swiper-slide">
+            <picture>
+              <source media="min-width: 768px" srcset="//placehold.jp/1200x600.jpg">
+              <source media="max-width: 767px" srcset="assets/images/img_mainvisual01.jpg">
+              <img src="assets/images/img_mainvisual01.jpg" alt="" width="375" height="455" loading="lazy">
+            </picture>
+          </li>
+          <li class="headerHero__item swiper-slide">
+            <picture>
+              <source media="min-width: 768px" srcset="//placehold.jp/1200x600.jpg">
+              <source media="max-width: 767px" srcset="//placehold.jp/375x455.jpg">
+              <img src="//placehold.jp/375x455.jpg" alt="" width="375" height="455" loading="lazy">
+            </picture>
+          </li>
+          <li class="headerHero__item swiper-slide">
+            <picture>
+              <source media="min-width: 768px" srcset="//placehold.jp/1200x600.jpg">
+              <source media="max-width: 767px" srcset="//placehold.jp/375x455.jpg">
+              <img src="//placehold.jp/375x455.jpg" alt="" width="375" height="455" loading="lazy">
+            </picture>
+          </li>
+        </ul>
+        <div class="headerHero__overlay">
+          <div class="headerHero__overlayLead">
+            <h1 class="headerHero__title">
+              タイトルが入ります
+              <span>サブタイトルサブタイトルサブタイトル</span>
+            </h1>
+          </div>
+        </div>
+        <div class="headerHero__pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="news" class="news section">
+      <div class="section__inner">
+        <div class="section__heading">
+          <h2 class="section__title">
+            NEWS<span> - お知らせ</span>
+          </h2>
+        </div>
+        <div class="section__container">
+          <div class="newsList">
+            <!-- [WordPress Output Contents] -->
+            <ul class="newsList__list">
+              <li class="newsList__item"><a href="#" class="newsList__itemAnc">
+                <span class="newsList__time"><time datatime="2022-01-01">01 JUN,2022</time></span>
+                <span class="newsList__news">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</span>
+              </a></li>
+              <li class="newsList__item"><a href="#" class="newsList__itemAnc">
+                <span class="newsList__time"><time datatime="2022-01-01">01 JUN,2022</time></span>
+                <span class="newsList__news">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</span>
+              </a></li>
+              <li class="newsList__item"><a href="#" class="newsList__itemAnc">
+                <span class="newsList__time"><time datatime="2022-01-01">01 JUN,2022</time></span>
+                <span class="newsList__news">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</span>
+              </a></li>
+            </ul>
+            <p class="newsList__error">お知らせはありません。</p>
+            <!-- /[WordPress Output Contents] -->
+          </div>
+          <!-- /.newsList -->
+        </div>
+      </div>
+    </section>
+    <!-- /#news -->
+
+    <section id="introduction" class="introduction section">
+      <div class="section__inner">
+        <div class="section__container">
+
+          <div class="introProfile section__block">
+            <div class="introProfile__visual">
+              <picture>
+                <source media="min-width: 768px" srcset="//placehold.jp/1200x600.jpg">
+                <source media="max-width: 767px" srcset="assets/images/img_profile.png">
+                <img src="assets/images/img_profile.png" alt="" width="375" height="152" loading="lazy">
+              </picture>
+            </div>
+            <div class="introProfile__desc">
+              <h2 class="introProfile__title">
+                Kenji Ishimaru<span class="introProfile__titlePost">人財革命家/起業家</span>
+              </h2>
+              <p class="introProfile__text">
+                1979年6月2日生まれ　現43歳。<br>
+                株式会社HEROES代表取締役 他複数社経営。<br>
+                人財育成を通して世界に革命を起こすことで世界を幸せにすることをミッションとして活動中
+              </p>
+            </div>
+
+            <div class="introProfile__sns">
+              <ul class="introProfile__snsList">
+                <li class="introProfile__snsItem"><a href="#" class="introProfile__snsAnc"><img src="assets/images/logo_youtube.svg" alt="youtube" width="30" height="30" loading="lazy"></a></li>
+                <li class="introProfile__snsItem"><a href="#" class="introProfile__snsAnc"><img src="assets/images/logo_facebook.svg" alt="facebook" width="30" height="30" loading="lazy"></a></li>
+                <li class="introProfile__snsItem"><a href="#" class="introProfile__snsAnc"><img src="assets/images/logo_instagram.svg" alt="instagram" width="30" height="30" loading="lazy"></a></li>
+                <li class="introProfile__snsItem"><a href="#" class="introProfile__snsAnc"><img src="assets/images/logo_line.svg" alt="line" width="30" height="30" loading="lazy"></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.introProfile -->
+
+          <div class="introPolicy section__block">
+            <div class="introPolicy__lead">
+              <h2 class="introPolicy__title">
+                <span class="introPolicy__titleUnit">日本と世界により良い教育を</span>
+                <br>
+                <span class="introPolicy__titleUnit">享受できる環境づくりを目指します</span>
+              </h2>
+              <p class="introPolicy__text">
+                ケーブルTVのセールスマン時代に全国3000名の中でトップセールスを達成。<br>
+                その後、24歳で会社を創業しNTTのインターネットを10万人へ販売した実績を持つ。<br>
+                現在は不動産賃貸や引越事業にて暮らしをサポート事業を展開している。他、プレゼンターとしても300回以上セミナーや人財研修を主催し人材革命家として活動中。<br>
+                IPO支援エンジェル投資家を企業にマッチングすることで日本と世界の様々な技術力と企画力を活かしたプロジェクトを構築している。
+              </p>
+            </div>
+            <div class="introPolicy__movie">
+              <button class="introPolicy__movieButton">
+                <img src="//placehold.jp/320x140.jpg" alt="" width="320" height="140" loading="lazy">
+              </button>
+              <div class="introPolicy__movieLink">
+                <a href="#" class="introPolicy__movieAnc">Youtubeチャンネル</a>
+              </div>
+            </div>
+          </div>
+          <!-- /.introPolicy -->
+
+          <div class="introAlbum section__block">
+            <div class="introAlbum__container swiper-container" data-swiper-id="swiperAlbum01">
+              <ul class="introAlbum__list swiper-wrapper">
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album01.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album02.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album03.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album04.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album05.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+              </ul>
+            </div>
+            <div class="introAlbum__container introAlbum__container--quick swiper-container" data-swiper-id="swiperAlbum02">
+              <ul class="introAlbum__list swiper-wrapper">
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album06.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album07.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album08.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album09.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album10.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+                <li class="introAlbum__item swiper-slide"><img src="assets/images/img_album11.jpg" alt="" srcset="" width="150" height="112" loading="lazy"></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.introAlbum -->
+        </div>
+      </div>
+    </section>
+    <!-- /#introduction -->
+
+    <section id="business" class="business section">
+      <div class="section__inner">
+        <div class="section__heading">
+          <h2 class="section__title">
+            BUSINESS<span> - 事業内容</span>
+          </h2>
+          <p class="section__text">
+            説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文。
+          </p>
+        </div>
+        <div class="section__container">
+          <div class="businessProject section__block">
+            <div class="businessProject__block">
+              <div class="businessProject__visual">
+                <img src="assets/images/img_project01.jpg" alt="" width="288" height="200" loading="lazy">
+              </div>
+              <div class="businessProject__lead">
+                <div class="businessProject__leadBlock">
+                  <h3 class="businessProject__title">人財共育事業</h3>
+                  <p class="businessProject__text">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文。</p>
+                </div>
+              </div>
+            </div>
+            <div class="businessProject__block">
+              <div class="businessProject__visual">
+                <img src="assets/images/img_project02.jpg" alt="" width="288" height="200" loading="lazy">
+              </div>
+              <div class="businessProject__lead">
+                <div class="businessProject__leadBlock">
+                  <h3 class="businessProject__title">引越し・不動産事業コンサル</h3>
+                  <p class="businessProject__text">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.businessProject -->
+
+          <div class="businessSchedule section__block">
+            <h3 class="businessSchedule__title">スケジュール</h3>
+            <div class="businessSchedule__container">
+              <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showTabs=1&showNav=1&showPrint=0&showTz=0&showCalendars=0&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+          </div>
+          <!-- /.businessSchedule -->
+        </div>
+      </div>
+    </section>
+    <!-- /#business -->
+
+    <section id="voice" class="voice section">
+      <div class="section__inner">
+        <div class="section__heading">
+          <h2 class="section__title">
+            VOICE<span> - お客様の声</span>
+          </h2>
+        </div>
+        <div class="section__container">
+          <div class="voiceSample">
+            <!-- [WordPress Output Contents] -->
+            <div class="voiceSample__container swiper-container" data-swiper-id="swiperVoice">
+              <ul class="voiceSample__list swiper-wrapper">
+                <li class="voiceSample__item swiper-slide"><a href="#" class="voiceSample__itemAnc">
+                  <div class="voiceSample__thumb"><img src="assets/images/img_voice01.jpg" alt="" width="200" height="111" loading="lazy"></div>
+                  <div class="voiceSample__desc">
+                    <h3 class="voiceSample__title">セールスの基礎が分かった</h3>
+                    <p class="voiceSample__name">S.A (21)</p>
+                    <p class="voiceSample__text">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
+                  </div>
+                </a></li>
+                <li class="voiceSample__item swiper-slide"><a href="#" class="voiceSample__itemAnc">
+                  <div class="voiceSample__thumb"><img src="assets/images/img_voice02.jpg" alt="" width="200" height="111" loading="lazy"></div>
+                  <div class="voiceSample__desc">
+                    <h3 class="voiceSample__title">セールスの基礎が分かった</h3>
+                    <p class="voiceSample__name">S.A (21)</p>
+                    <p class="voiceSample__text">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
+                  </div>
+                </a></li>
+                <li class="voiceSample__item swiper-slide"><a href="#" class="voiceSample__itemAnc">
+                  <div class="voiceSample__thumb"><img src="assets/images/img_voice01.jpg" alt="" width="200" height="111" loading="lazy"></div>
+                  <div class="voiceSample__desc">
+                    <h3 class="voiceSample__title">セールスの基礎が分かった</h3>
+                    <p class="voiceSample__name">S.A (21)</p>
+                    <p class="voiceSample__text">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
+                  </div>
+                </a></li>
+              </ul>
+            </div>
+            <!-- [WordPress Output Contents] -->
+          </div>
+          <!-- /.voiceSample -->
+        </div>
+      </div>
+    </section>
+    <!-- /#voice -->
+
+    <section id="contact" class="contact section">
+      <div class="section__inner">
+        <div class="section__heading">
+          <h2 class="section__title">
+            CONTACT<span> - お問い合わせ</span>
+          </h2>
+        </div>
+        <div class="section__container">
+          <div class="contactForm">
+            問い合わせ内容①
+            問い合わせ内容②
+            問い合わせ内容③
+            姓 必須
+            <input type="text" name="lastName" id="lastName">
+            例）佐藤
+            名 必須
+            <input type="text" name="firstName" id="firstName">
+            例）太郎
+            メールアドレス 必須
+            <input type="email" name="email" id="email">
+            例）sample@sample.com
+            お問い合わせ内容 必須
+            <input type="text" name="contactBody" id="contactBody">
+            <button type="submit">送信</button>
+          </div>
+          <!-- /.contactForm -->
+        </div>
+      </div>
+    </section>
+    <!-- /#contact -->
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo"><a href="/" class="footer__logoAnc"><img src="assets/images/logo_corporate.png" alt="KENJI ISHIMARU" width="90" height="30" loading="lazy"></a></div>
+      <p class="footer__text">人財革命を通して世界を幸せに</p>
+    </div>
+    <div class="footer__curtain">
+      <p class="footer__copyright">Kenji Ishimaru All Rights received</p>
+      <div class="footerSns">
+        <ul class="footerSns__list">
+          <li class="footerSns__item"><a href="#" class="footerSns__itemAnc"><img src="assets/images/logo_youtube.svg" alt="youtube" width="30" height="30" loading="lazy"></a></li>
+          <li class="footerSns__item"><a href="#" class="footerSns__itemAnc"><img src="assets/images/logo_facebook.svg" alt="facebook" width="30" height="30" loading="lazy"></a></li>
+          <li class="footerSns__item"><a href="#" class="footerSns__itemAnc"><img src="assets/images/logo_instagram.svg" alt="instagram" width="30" height="30" loading="lazy"></a></li>
+          <li class="footerSns__item"><a href="#" class="footerSns__itemAnc"><img src="assets/images/logo_line.svg" alt="line" width="30" height="30" loading="lazy"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
